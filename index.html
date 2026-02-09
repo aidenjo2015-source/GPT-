@@ -1,0 +1,262 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/site/index.html b/site/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..1075271eed8938c49f76bffcc11a96defcd83979
+--- /dev/null
++++ b/site/index.html
+@@ -0,0 +1,252 @@
++<!doctype html>
++<html lang="ko">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1" />
++    <title>세부 영어캠프 | 카카오채널 상담</title>
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <header class="site-header">
++      <div class="container nav">
++        <div class="logo">세부영어캠프</div>
++        <nav class="nav-links">
++          <a href="#why">왜 세부</a>
++          <a href="#compare">캠프 비교</a>
++          <a href="#quiz">테스트</a>
++          <a href="#faq">FAQ</a>
++        </nav>
++        <a class="btn btn-primary" href="#kakao" data-kakao-link>카카오채널 상담</a>
++      </div>
++    </header>
++
++    <main>
++      <section class="hero">
++        <div class="container hero-grid">
++          <div>
++            <p class="eyebrow">3분 테스트 + 맞춤 상담</p>
++            <h1>우리 아이에게 딱 맞는 세부 영어캠프, 3분 만에 찾기</h1>
++            <p class="subtitle">
++              간단한 테스트로 캠프 유형을 추천받고, 카카오채널에서 바로 상담하세요.
++            </p>
++            <div class="cta-row">
++              <a class="btn btn-primary" href="#kakao" data-kakao-link>카카오채널 상담하기</a>
++              <a class="btn btn-outline" href="#quiz">캠프 유형 테스트 시작</a>
++            </div>
++            <div class="hero-badges">
++              <span>✅ 몰입형 영어 환경</span>
++              <span>✅ 안전 생활 케어</span>
++              <span>✅ 합리적인 비용</span>
++            </div>
++          </div>
++          <div class="hero-card">
++            <h3>빠른 요약</h3>
++            <ul>
++              <li>대상: 초등~고등 학생</li>
++              <li>기간: 2주 / 4주 / 8주+</li>
++              <li>유형: 스피킹 집중 · 학습 몰입 · 밸런스형</li>
++            </ul>
++            <p class="note">* 실제 프로그램은 유학원 및 캠프별로 상이합니다.</p>
++          </div>
++        </div>
++      </section>
++
++      <section id="why" class="section">
++        <div class="container">
++          <div class="section-title">
++            <h2>왜 세부 영어캠프인가요?</h2>
++            <p>학부모가 가장 많이 묻는 3가지 기준으로 정리했습니다.</p>
++          </div>
++          <div class="grid-3">
++            <article class="card">
++              <h3>합리적인 비용 대비 몰입 환경</h3>
++              <p>영어 사용 비중이 높은 지역에서 집중 학습이 가능합니다.</p>
++            </article>
++            <article class="card">
++              <h3>짧은 기간에도 체감 성과</h3>
++              <p>하루 학습량이 높은 집중형 커리큘럼으로 말문이 빠르게 트입니다.</p>
++            </article>
++            <article class="card">
++              <h3>안전 관리와 생활 케어</h3>
++              <p>기숙형 관리, 24시간 케어, 통학 동선 등 옵션이 다양합니다.</p>
++            </article>
++          </div>
++        </div>
++      </section>
++
++      <section id="compare" class="section alt">
++        <div class="container">
++          <div class="section-title">
++            <h2>유형별 추천 유학원 한눈에 보기</h2>
++            <p>아이의 성향과 목표에 따라 추천 유학원을 다르게 매칭합니다.</p>
++          </div>
++          <div class="grid-3">
++            <article class="card">
++              <h3>A형: 스피킹 집중형</h3>
++              <p>초급/회화 자신감이 필요한 학생에게 추천.</p>
++              <ul>
++                <li>1:1 회화 비중 ↑</li>
++                <li>발음·표현 교정 집중</li>
++                <li>생활 밀착 케어</li>
++              </ul>
++            </article>
++            <article class="card">
++              <h3>B형: 학습 몰입형</h3>
++              <p>성적 향상/시험 대비 목표에 적합한 유형.</p>
++              <ul>
++                <li>레벨 테스트 기반 분반</li>
++                <li>하루 학습량 높음</li>
++                <li>숙제/피드백 관리</li>
++              </ul>
++            </article>
++            <article class="card">
++              <h3>C형: 밸런스형</h3>
++              <p>학습+체험 균형을 원하는 학생에게 추천.</p>
++              <ul>
++                <li>체험 프로그램 포함</li>
++                <li>학습 부담 중간</li>
++                <li>처음 캠프에 적합</li>
++              </ul>
++            </article>
++          </div>
++
++          <div class="compare-table">
++            <div class="table-row header">
++              <span>항목</span>
++              <span>A형</span>
++              <span>B형</span>
++              <span>C형</span>
++            </div>
++            <div class="table-row">
++              <span>추천 대상</span>
++              <span>초급/회화 집중</span>
++              <span>시험 대비/성적 향상</span>
++              <span>체험+학습 균형</span>
++            </div>
++            <div class="table-row">
++              <span>학습 강도</span>
++              <span>중간</span>
++              <span>높음</span>
++              <span>중간</span>
++            </div>
++            <div class="table-row">
++              <span>프로그램 특징</span>
++              <span>스피킹/생활 영어</span>
++              <span>구조화 커리큘럼</span>
++              <span>체험 프로그램 포함</span>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section id="quiz" class="section">
++        <div class="container">
++          <div class="section-title">
++            <h2>아이에게 맞는 캠프 유형을 3분 안에 찾기</h2>
++            <p>6문항 테스트 결과에 따라 추천 유학원과 캠프를 알려드립니다.</p>
++          </div>
++          <div class="quiz" data-quiz>
++            <div class="quiz-progress" data-quiz-progress>1 / 6</div>
++            <div class="quiz-progress-bar" aria-hidden="true">
++              <span data-quiz-bar></span>
++            </div>
++            <div class="quiz-question" data-quiz-question></div>
++            <div class="quiz-options" data-quiz-options></div>
++            <div class="quiz-actions">
++              <button class="btn btn-outline" data-quiz-prev disabled>이전</button>
++              <button class="btn btn-primary" data-quiz-next>다음</button>
++            </div>
++          </div>
++          <div class="quiz-result" data-quiz-result hidden>
++            <h3 data-result-title></h3>
++            <p data-result-summary></p>
++            <div class="grid-3" data-result-cards></div>
++            <div class="result-actions">
++              <a class="btn btn-primary" href="#kakao" data-kakao-link>카카오채널 상담받기</a>
++              <button class="btn btn-outline" type="button" data-quiz-restart>다시 테스트하기</button>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section class="section alt">
++        <div class="container">
++          <div class="section-title">
++            <h2>학부모가 신뢰하는 케어 시스템</h2>
++            <p>캠프 운영 관리부터 생활 지원까지 한 번에 확인하세요.</p>
++          </div>
++          <div class="grid-3">
++            <article class="card">
++              <h3>안전 관리</h3>
++              <p>24시간 관리, 통학 동선 확인, 생활 규정 준수.</p>
++            </article>
++            <article class="card">
++              <h3>생활 지원</h3>
++              <p>건강 체크, 식단 관리, 보호자 커뮤니케이션.</p>
++            </article>
++            <article class="card">
++              <h3>학습 리포트</h3>
++              <p>주간 학습 리포트, 피드백 공유, 성장 추적.</p>
++            </article>
++          </div>
++        </div>
++      </section>
++
++      <section id="faq" class="section">
++        <div class="container">
++          <div class="section-title">
++            <h2>자주 묻는 질문</h2>
++          </div>
++          <div class="faq">
++            <details>
++              <summary>초등학생도 가능한가요?</summary>
++              <p>가능합니다. 연령대별 맞춤 프로그램과 생활 케어 옵션을 안내드립니다.</p>
++            </details>
++            <details>
++              <summary>안전 관리는 어떻게 되나요?</summary>
++              <p>24시간 관리 체계, 기숙사 규정, 생활 동선 관리 등 유학원별 체계를 안내합니다.</p>
++            </details>
++            <details>
++              <summary>비용은 어느 정도인가요?</summary>
++              <p>기간과 프로그램 유형에 따라 다릅니다. 상담 시 예산 범위에 맞춰 추천드립니다.</p>
++            </details>
++          </div>
++        </div>
++      </section>
++
++      <section id="kakao" class="section kakao">
++        <div class="container kakao-box">
++          <div>
++            <h2>지금 카카오채널에서 맞춤 상담 받기</h2>
++            <p>아이에게 맞는 캠프/유학원 추천까지 한 번에 안내드립니다.</p>
++          </div>
++          <div class="kakao-actions">
++            <a class="btn btn-primary" href="#kakao" data-kakao-link>
++              카카오채널 상담하기
++            </a>
++            <p class="note">* 실제 카카오채널 링크는 app.js에서 교체해주세요.</p>
++          </div>
++        </div>
++      </section>
++    </main>
++
++    <footer class="site-footer">
++      <div class="container footer-grid">
++        <div>
++          <h4>세부영어캠프 매칭</h4>
++          <p>맞춤 상담 및 유학원 추천 서비스를 제공합니다.</p>
++        </div>
++        <div>
++          <h4>연락처</h4>
++          <p>카카오채널 상담으로 빠르게 문의 가능합니다.</p>
++        </div>
++        <div>
++          <h4>운영 정보</h4>
++          <p>프로그램 정보는 유학원/캠프별로 상이할 수 있습니다.</p>
++        </div>
++      </div>
++    </footer>
++
++    <script src="app.js"></script>
++  </body>
++</html>
+ 
+EOF
+)
